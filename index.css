@@ -1,0 +1,480 @@
+        #wrapper {
+            position: relative;
+            margin: auto;
+			margin-top: -50px;
+            width: 900px;
+            height: auto;
+        }
+
+.images {
+	animation-name: float;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.iImages {
+	animation: floating;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out;	
+}
+@keyframes floating {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+#information {
+	position: absolute;
+	top: 140px;
+	left: 30px;
+	width: 500px;
+	height: 110px;
+	background-color: grey;
+	opacity: .8;
+	z-index: 100px;
+	border: 3px solid white;
+}
+p {
+	padding: 4%;
+	font-family: 'roberto', sans-serif;
+	font-weight: bold;
+}
+
+/* World 1 Animations */
+        #world1 {
+            position: absolute;
+            top: 290px;
+            left:-50px;
+            z-index: 1;
+			width: 340px;
+			height: auto;
+        } 
+		#yuQuan {
+            position: absolute;
+            top: 400px;
+            left:105px;
+            z-index: 1;
+			width: 100px;
+			height: auto;
+			display: none;
+        }
+/* World 2 Animations */
+		#world2 {
+            position: absolute;
+            top: 290px;
+            right:400px;
+			width: 200px;
+			height: auto;
+			opacity: .8;
+			z-index: 10;
+        } 
+		#zongZi {
+            position: absolute;
+            top: 350px;
+            right:445px;
+            z-index: 15;
+			width: 100px;
+			height: auto;
+			display: none;
+        } 
+		.zongZianimate {
+			animation: zongZi;
+			animation-duration: 2s;
+		}
+		@keyframes zongZi {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(1800deg);
+			}
+		}
+/* World 3 Animations */
+		#world3 {
+            position: absolute;
+            top: 260px;
+            right:-2px;
+			width: 400px;
+			height: auto;
+			
+        }
+		.world3animate {
+			animation: world3animate;
+			animation-duration: 2.5s;
+			animation-delay: 4s;
+		}
+		@keyframes world3animate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		#boat {
+            position: absolute;
+            top: 440px;
+            right:115px;
+            z-index: 1;
+			width: 100px;
+			height: auto;
+			transform-origin: 500px 500px;
+			animation: boatmove 5s;
+			animation-delay:0.25s;
+			display: none;
+        }  
+		.boatanimate {
+			animation: boatmove;
+			animation-duration: 5s;
+		}
+		@keyframes boatmove{
+			0% {transform: rotate(1deg)translate(0px,0px)}
+			25% {transform:rotate(-1deg) translate(0px,-25px)  }
+			50% {transform:rotate(1deg) translate(0px, 0px) }
+			75% {transform:rotate(-1deg) translate(0px,-20px)}
+			100%{transform:rotate(1deg) translate(0px,0px)}
+		}
+/* World 4 Animations */
+		#world4 {
+            position: absolute;
+            bottom: 70px;
+            left:10px;
+            z-index: 10;
+			width: 300px;
+			height: auto;
+        } 
+		#poison {
+            position: absolute;
+            bottom: 160px;
+            left: 100px;
+            z-index: 10;
+			width: 50px;
+			height: auto;
+			opacity: 0;
+			transition: opacity 2s, bottom 2s, width 2s, left 2s;
+        } 
+		.poisonanimate {
+			animation-name: poisonanimation;
+			animation-delay: 1s;
+			animation-duration: 2s;
+			transform-origin: 70% 70%;
+			animation-iteration-count:  infinite;
+		}
+@keyframes poisonanimation {
+	0% {opacity: 1;}
+	5% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+/* World 5 Animations */
+		#world5 {
+            position: absolute;
+            top: 490px;
+            left:260px;
+            z-index: 1;
+			width: 350px;
+			height: auto;
+        } 
+		#japan {
+            position: absolute;
+            top: 560px;
+            left: 340px;
+            z-index: 10;
+			width: 190px;
+			opacity: 1;
+			height: auto;
+			transition: opacity 1s;
+        }
+		#korea {
+			position: absolute;
+            top: 560px;
+            left: 340px;
+            z-index: 9;
+			width: 170px;
+			opacity: 0;
+			height: auto;
+			transition: opacity 2s;
+		}
+.koreaAnimate {
+	animation-name: koreaAnimation;
+	animation-duration: 2s;
+	animation-delay: 2s;
+}
+@keyframes koreaAnimation {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+		#taiwan {
+			position: absolute;
+            top: 560px;
+            left: 340px;
+            z-index: 8;
+			width: 160px;
+			height: auto;
+			opacity: 0;
+			transition: opacity 2s;
+		}
+.taiwanAnimate {
+	animation-name: taiwananimation;
+	animation-delay: 4s;
+	animation-duration: 2s;
+}
+@keyframes taiwananimation {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+		#china {
+			position: absolute;
+            top: 560px;
+            left: 300px;
+            z-index: 7;
+			width: 250px;
+			height: auto;
+			opacity: 0;
+			transition: opacity 2s;
+		}
+.chinaAnimate {
+	animation-name: chinaAnimation;
+	animation-delay: 6s;
+	animation-duration: 2s;
+}
+@keyframes chinaAnimation {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+		#vietnam {
+			position: absolute;
+            top: 560px;
+            left: 340px;
+            z-index: 6;
+			width: 160px;
+			height: auto;
+			transition: opacity 2s;
+			opacity: 0;
+		}
+.vietanimate {
+	animation-name: vietAnimation;
+	animation-delay: 8s;
+	animation-duration: 2s;
+} 
+@keyframes vietAnimation {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+		#world6 {
+			position: absolute;
+            bottom: 100px;
+            right: 30px;
+            z-index: 9;
+			width: 300px;
+			opacity: 1;
+			height: auto;
+			opacity: .8;
+			transition: opacity 2s;
+		}
+		#bead {
+			position: absolute;
+            bottom: 170px;
+            right: 80px;
+            z-index: 9;
+			width: 210px;
+			opacity: 1;
+			height: auto;
+			transition: opacity 2s;
+		}
+.beadanimate {
+	animation-name: beadAnimation;
+	animation-duration: 4s;
+}
+@keyframes beadAnimation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(3600deg);}
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+	#world7 {
+			position: absolute;
+            bottom: 90px;
+            right: 320px;
+            z-index: 9;
+			width: 170px;
+			opacity: 1;
+			height: auto;
+			transition: opacity 2s;
+		}
+		#mugwort {
+			position: absolute;
+            bottom: 120px;
+            right: 370px;
+            z-index: 9;
+			width: 70px;
+			opacity: 1;
+			height: auto;
+			transition: opacity 2s;
+		}
+#ProgressB {
+	position: absolute;
+	width: 260px;
+	top: 160px;
+	right: 50px;
+	z-index: 10;
+	opacity: 1;
+}
+#bar1 {
+	position: absolute;
+	width: 45px;
+	top: 170px;
+	right: 255px;
+	z-index: 7;
+	opacity: 0;
+}
+#bar2 {
+	position: absolute;
+	width: 75px;
+	top: 170px;
+	right: 220px;
+	z-index: 6;
+	opacity: 0;
+}
+#bar3 {
+	position: absolute;
+	width: 75px;
+	top: 170px;
+	right: 180px;
+	z-index: 5;
+	opacity: 0;
+}
+#bar4 {
+	position: absolute;
+	width: 74px;
+	top: 165px;
+	right: 150px;
+	z-index: 4;
+	opacity: 0;
+}
+#bar5 {
+	position: absolute;
+	width: 70px;
+	top: 170px;
+	right: 115px;
+	z-index: 3;
+	opacity: 0;
+}
+#bar6 {
+	position: absolute;
+	width: 70px;
+	top: 170px;
+	right: 80px;
+	z-index: 2;
+	opacity: 0;
+}
+#bar7 {
+	position: absolute;
+	width: 61px;
+	top: 170px;
+	right: 55px;
+	z-index: 1;
+	opacity: 0;
+}
+#ProgressF {
+	position: absolute;
+	width: 260px;
+	top: 160px;
+	right: 50px;
+	z-index: 11;
+	opacity: 0;
+}
+
+#FinalWrap {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+    margin-top: 100px;
+	background-color: beige;
+	border-radius: 20px;
+	border: solid black 5px;
+	width: 100px;
+	height: 100px;
+	z-index: 0;
+}
+.finalImage {
+	width: 200px;
+	margin: 10px;
+	margin-left: 20px;
+	display: inline-block;
+	float: left;
+}
+#finalTaiwan {
+	animation-name: finalRotate;
+}
+@keyframes finalRotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(3600deg);}
+}
+#finalViet, #finalTaiwan, #finalIndia {
+	display: none;
+}
+#displayFinal {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
